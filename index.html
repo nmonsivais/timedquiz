@@ -13,15 +13,47 @@
 </head>
 
 <body>
+    <!-- //Create a card with button to ask user to start quiz.// -->
     <div class="center"></div>
-
     <div class="center" class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>...</p>
+        <h1>Prepare for the Ultimate Challenge</h1>
+        <p>Get Ready</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Click to Start Quiz</a></p>
     </div>
+    <!-- Create a timer button to reference from JavaScript. -->
+    <Button class="timer">Timer</Button> <button>High Score</button>
+    <!-- Create a space to capture the question using document.queryselector. -->
+    <div class="centerBtn">
+        <div class="question">
+        </div>
+    </div>
+    <!-- Create a break between question an answer choices. -->
+    <br>
 
-<Button>Timer</Button> <button>High Score</button>
+    <!-- When to CSS to create a style of center for the buttons. -->
+    <div class="centerBtn">
+    <!-- Create answer choice A that works.  If it works, copy and paste for B,C,D. -->
+        <button class="choiceA" class="centerBtn">placeholderA
+        </button>
+    </div>
+
+    <div class="centerBtn">
+        <button class="choiceB" class="centerBtn">placeholderB
+        </button>
+    </div>
+
+    <div class="centerBtn">
+        <button class="choiceC" class="centerBtn">placeholderC
+        </button>
+    </div>
+
+    <div class="centerBtn">
+        <button class="choiceC" class="centerBtn">placeholderD
+        </button>
+    </div>
+
+
+
 
     <script src="assets/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
