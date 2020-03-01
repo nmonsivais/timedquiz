@@ -5,8 +5,18 @@
 
  .centerBtn {
   text-align: center;
+  color: white;
   width: 40%;
   margin-left: 30%;
   margin-right: 30%;
-  background-color: cadetblue;
+  background-color: #c7ca0fad;
+ }
+
+ #bgColor {
+   background-color: black;
+ }
+
+ .timer{
+   text-align: center;
+   font-size: large;
  }
