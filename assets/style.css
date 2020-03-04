@@ -19,4 +19,6 @@
  .timer{
    text-align: center;
    font-size: large;
+   list-style-type: none;
+
  }

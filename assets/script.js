@@ -34,24 +34,30 @@ function setTime() {
 
     }, 1000);
     showQuestion();
-    var container1 = document.createElement("div");
-    var buttonA = document.createElement("button");
-    //choices is a variable that all other elements will be appended to.
-    var choices = document.querySelector("#choices");
-    // var list = document.createElement("li");
+    //Note to self: document.querySelector is used to select something from HTML.  IF you are selecting an ID, put a # in front of what you are selecting.//
+    //All variables for multiple choice question.//
+    //Create a for loop to have all questions populate through the loop.
 
-    buttonA.textContent = questionBank[0].choices[0];
-    container1.appendChild(buttonA);
-    choices.appendChild(container1);
+
+    for (var i = 0; i < questionBank[0].choices.length; i++) {
+
+        var container1 = document.createElement("ul");
+        var buttonA = document.createElement("button");
+        var choices = document.querySelector("#choices");
+        //choices is a variable that all other elements will be appended to.
+
+        buttonA.textContent = questionBank[0].choices[0];
+        container1.appendChild(buttonA);
+        choices.appendChild(container1);
+
+    }
+
+
+    // 1. create a list under container .choices
+    // 2. Attache a ul list by using "li".
+    // 3. Have all choices populate under the "li" as buttons.//
     // ------------------------------------------------------------------- //
-    // var container2 = document.createElement("div");
-    // var buttonB = document.createElement("button");
-    // var choices = document.querySelector(".choices");
 
-    // buttonB.textContent = questionBank[0].choices[1];
-
-    // container1.appendChild(buttonB);
-    // choices.appendChild(container2);
     // ------------------------------------------------------------------- //
 
 }
