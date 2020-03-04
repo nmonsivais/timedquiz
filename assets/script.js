@@ -63,7 +63,7 @@ function sendMessage() {
 // setTime();
 //Link the timer to activate when the START button is clicked.
 
-
+//Was able to populate a question wit 4 different answer choices.//
 //Prepare the first question with multiple choices and display it on page.
 function showQuestion() {
     console.log('ShowQuestion executed');
