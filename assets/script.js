@@ -1,19 +1,21 @@
 var questionBank = [
     {
-        question: 'Which of the following skills does Tro NOT know?',
-        choices: ['Adobe Photoshoping', 'Salsa Dancing', 'YouTube-ing', 'Play Guitar'],
-        answer: 'a'
+        question: "Which of the following skills does Tro NOT know?",
+        choices: ["Adobe Photoshoping", "Salsa Dancing", "YouTube-ing", "Play Guitar"],
+        answer: "Adobe Photoshoping"
     },
     {
-        question: 'This is my second question?',
-        choices: ['Choice a', 'Choice b', 'Choice c', 'Choice d'],
+        question: "What is Tro's favorite hobby?",
+        choices: ["Dancing", "Gaming", "Weight-lifting", "Video Editing"],
         answer: 'b'
     },
     {
-        question: 'This is my third question',
-        choices: ['Choice a', 'Choice b', 'Choice c', 'Choice d'],
+        question: "This is my third question",
+        choices: ["Choice a", "Choice b", "Choice c", "Choice d"],
         answer: 'b'
     }];
+var qNum = 0;
+
 //create a timer that counts down.
 var timer = document.querySelector(".timer");
 //User Question appear below to make question and button choices appear.//
@@ -39,31 +41,23 @@ function setTime() {
     //Create a for loop to have all questions populate through the loop.
 
 
-    for (var i = 0; i < questionBank[0].choices.length; i++) {
+    for (var i = 0; i < questionBank[qNum].choices.length; i++) {
 
         var container1 = document.createElement("ul");
         var buttonA = document.createElement("button");
         var choices = document.querySelector("#choices");
         //choices is a variable that all other elements will be appended to.
 
-        buttonA.textContent = questionBank[0].choices[0];
+        buttonA.innerHTML = questionBank[qNum].choices[i];
         container1.appendChild(buttonA);
         choices.appendChild(container1);
 
     }
 
-
-    // 1. create a list under container .choices
-    // 2. Attache a ul list by using "li".
-    // 3. Have all choices populate under the "li" as buttons.//
-    // ------------------------------------------------------------------- //
-
-    // ------------------------------------------------------------------- //
-
 }
 
 function sendMessage() {
-    timer.textContent = " ";
+    timer.innerHTML = " ";
 }
 
 // setTime();
@@ -76,10 +70,7 @@ function showQuestion() {
     // grabbed front end element
     var questionBankDisplay = document.querySelector('.question');
     // updated that element with the first questions
-    questionBankDisplay.textContent = questionBank[0].question
-
-    // places the choices on the pages 
-    // .choices
+    questionBankDisplay.innerHTML = questionBank[qNum].question;
 
 }
 
@@ -89,5 +80,3 @@ function showQuestion() {
 //Set up on"click" to check if the answer is right or wrong.
 
 //Depending if they are right or wrong, adjust timer.  If wrong, subtract 10 seconds.  If right, earn 1 point.  Regardless of which happens, have next question appear.
-
-
